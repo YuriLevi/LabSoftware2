@@ -1,0 +1,80 @@
+<div class="tab-header h2" >
+  <h2>Solicitar Serviço</h2>
+</div>
+
+<div  class="container" style="background-color: #FAFAFA">
+<form>
+    <div class="form-group required">
+        <label for="TipoServico">Qual tipo de serviço você precisa?</label>
+        <select class="form-control" id="TipoServico">
+          <option>Chaveiro</option>
+          <option>Dedetizador</option>
+          <option>Desentupidor</option>
+          <option>Eletricista</option>
+          <option>Encanador</option>
+          <option>Gás</option>
+          <option>Outros</option>
+        </select>
+        <label class="text-danger" *ngIf="service.formModel.get('UserName').touched && service.formModel.get('UserName').errors?.required">Campo obrigatório.</label>
+      </div>
+  <div class="form-group">
+      <div class="custom-control custom-radio">
+          <input type="radio" class="custom-control-input" id="ServicoEmergencial">
+          <label class="custom-control-label"  data-toggle="tooltip" data-placement="right" title="Marque essa opção caso deseje que o serviço seja realizado imediatamente" for="ServicoEmergencial">SERVIÇO EMERGENCIAL</label>
+        </div>
+    </div> 
+  <div class="form-group">
+      <label for="FormControlText">Informações Adicionais</label>
+      <textarea class="form-control" id="FormControlText" rows="3"></textarea>
+    </div>
+ <div class="form-group">
+      <label for="FullName">Nome Completo</label>
+      <input class="form-control" type="text" formControlName="FullName">
+  </div>
+  <div class="form-group">
+    <label>Email</label>
+    <input class="form-control" formControlName="Email">
+    <label class="text-danger" *ngIf="service.formModel.get('Email').touched && service.formModel.get('Email').errors?.email">Invalid
+      email address.</label>
+  </div>
+  <div class="form-group">
+      <label>Telefone</label>
+      <input class="form-control" formControlName="Email">
+      <label class="text-danger" *ngIf="service.formModel.get('Email').touched && service.formModel.get('Email').errors?.email">Invalid
+        email address.</label>
+    </div>  
+    <div class="form-group">
+        <label for="inputAddress">Endereço</label>
+        <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
+      </div>
+      <div class="form-group">
+        <label for="inputAddress2">Complemento</label>
+        <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor">
+      </div>
+      <div class="form-row">
+        <div class="form-group col-md-6">
+          <label for="inputCity">Cidade</label>
+          <input type="text" class="form-control" id="inputCity">
+        </div>
+        <div class="form-group col-md-4">
+          <label for="inputState">Estado</label>
+          <select id="inputState" class="form-control">
+            <option selected>Choose...</option>
+            <option>Bahia</option>
+          </select>
+        </div>
+        <div class="form-group col-md-2">
+          <label for="inputZip">CEP</label>
+          <input type="text" class="form-control" id="inputZip">
+        </div>
+      </div>
+  <div class="form-row">
+    <div class="form-group col-md-8 offset-md-2">
+      <button type="submit" class="btn btn-lg btn-block" 
+      routerLink='/minhas-solicitacoes' 
+      routerLinkActive='active'
+              >Solicitar</button>
+    </div>
+  </div>
+</form>
+</div>

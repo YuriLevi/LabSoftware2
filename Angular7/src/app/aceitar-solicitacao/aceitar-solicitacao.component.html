@@ -1,0 +1,75 @@
+<div class="tab-header h2" >
+    <h2>Solicitações de Serviço Disponíveis</h2>
+  </div>
+
+<section class="fdb-block">
+  <div class="container" align ="center" topmargin =150px;>  
+    <div class="card" style="width: 18rem;"> 
+      <div class="card-body">
+        <h5 class="card-title">Encanador</h5>        
+        <h6 class="card-title">Serviço Emergencial</h6>
+        <p class="card-text">"Preciso de encanador urgente. O cano da lavanderia estourou e não tenho acesso a transmissão."</p>
+        <p class="card-text">Ladeira do jacaré, 15 - Macaúbas, Salvador</p>
+        <a href="#" class="btn btn-primary"        
+        data-toggle="modal" data-target="#ModalServico">Detalhes</a>
+      </div>
+    </div>
+
+    
+  </div>
+</section>
+
+<div class="modal fade bd-example-modal-lg" id="ModalServico" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Solicitação de Serviço</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+
+          <h5>Informações:</h5>
+          <p class="card-text">Tipo: Encanador</p>
+          <p class="card-text">Serviço Emergencial</p>
+          <p class="card-text">Informações Adicionais: Preciso de encanador urgente. O cano da lavanderia estourou e não tenho acesso a transmissão.</p>
+          <p class="card-text">Endereço: Ladeira do jacaré, 15 - Macaúbas, Salvador</p>          
+
+          <h5>Etapas:</h5>
+
+          <div class="card-deck">
+              <div class="card">
+                <img class="card-img-top" src="/assets/img/solicitar.png" alt="Card image cap">
+                <div class="card-body">
+                  <h5 class="card-title">1. Solicitar Serviço</h5>
+                  <p class="card-text">Os clientes solicitam serviços.</p>
+                </div>
+              </div>
+              <div class="card">
+                <img class="card-img-top" src="/assets/img/aceitarPLaranja.png" alt="Card image cap">
+                <div class="card-body">
+                  <h5 class="card-title">2. Aceitar Solicitação de Serviço</h5>
+                  <p class="card-text">O prestador irá aceitar as solicitações de serviços geradas pelos clientes.</p>
+                 
+                </div>
+              </div>
+              <div class="card">
+                <img class="card-img-top" src="/assets/img/aceitarPCinza.png" alt="Card image cap">
+                <div class="card-body">
+                  <h5 class="card-title">3. Aceitar Prestador de Serviço</h5>
+                  <p class="card-text">Após o prestador aceitar o solicitação de serviço, o cliente terá acesso ao perfil do prestador e irá aceitar prestador que foi selecionado pela aplicação.</p>
+                  
+                </div>
+              </div>
+            </div>
+            
+
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+          <button type="button" class="btn btn-primary" data-dismiss="modal">Aceitar</button>
+        </div>
+      </div>
+    </div>
+  </div>

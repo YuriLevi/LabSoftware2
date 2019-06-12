@@ -1,0 +1,39 @@
+<form [formGroup]="service.formModel" autocomplete="off" (submit)="onSubmit()">
+  <div class="form-group required">
+    <label>Nome do Usuário</label>
+    <input class="form-control" formControlName="UserName">
+    <label class="text-danger" *ngIf="service.formModel.get('UserName').touched && service.formModel.get('UserName').errors?.required">Esse campo é obrigatorio.</label>
+  </div>
+  <div class="form-group">
+    <label>Email</label>
+    <input class="form-control" formControlName="Email">
+    <label class="text-danger" *ngIf="service.formModel.get('Email').touched && service.formModel.get('Email').errors?.email">Email invalido.</label>
+  </div>
+  <div class="form-group">
+    <label>Nome Completo</label>
+    <input class="form-control" formControlName="Nome">
+  </div>
+  <div class="form-group">
+    <label>Tipo</label>
+    <input class="form-control" formControlName="Tipo">
+  </div>
+  <div formGroupName="Passwords">
+    <div class="form-group required">
+      <label>Senha</label>
+      <input type="password" class="form-control" formControlName="Password">
+      <label class="text-danger" *ngIf="service.formModel.get('Passwords.Password').touched && service.formModel.get('Passwords.Password').errors?.required">Esse campo é obrigatorio.</label>
+      <label class="text-danger" *ngIf="service.formModel.get('Passwords.Password').touched && service.formModel.get('Passwords.Password').errors?.minlength">Mínimo de 4 caracteres.</label>
+    </div>
+    <div class="form-group required">
+      <label>Confirmar Senha</label>
+      <input type="password" class="form-control" formControlName="ConfirmPassword">
+      <label class="text-danger" *ngIf="service.formModel.get('Passwords.ConfirmPassword').touched && service.formModel.get('Passwords.ConfirmPassword').errors?.required">Esse campo é obrigatorio.</label>
+      <label class="text-danger" *ngIf="service.formModel.get('Passwords.ConfirmPassword').touched && service.formModel.get('Passwords.ConfirmPassword').errors?.passwordMismatch">Senhas não conferem</label>
+    </div>
+  </div>
+  <div class="form-row">
+    <div class="form-group col-md-8 offset-md-2">
+      <button type="submit" class="btn btn-lg btn-block" [disabled]="!service.formModel.valid">Registrar</button>
+    </div>
+  </div>
+</form>
